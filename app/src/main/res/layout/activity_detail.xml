@@ -1,68 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/image_iv"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sandwich_picture_content_description"
-        android:scaleType="centerCrop" />
-
-    <TextView
-        android:id="@+id/origin_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/detail_also_known_as_label"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_ingredients_label"
-        android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="centerCrop" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_place_of_origin_label"
-        android:textStyle="bold" />
+        <!-- Origin Category -->
+        <LinearLayout style="@style/LinearCategoryStyle">
 
-    <TextView
-        android:id="@+id/description_tv"
-        android:layout_gravity="bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <!-- Origin label -->
+            <TextView
+                android:text="@string/detail_place_of_origin_label"
+                style="@style/LabelStyle" />
 
-    <TextView
-        android:id="@+id/ingredients_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <!-- Origin fields container -->
+            <LinearLayout style="@style/LinearFieldStyle">
 
-    <TextView
-        android:id="@+id/also_known_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <!-- Origin field -->
+                <TextView
+                    android:id="@+id/origin_tv"
+                    style="@style/TextViewFieldStyle"
+                    tools:text="Comes from England" />
+            </LinearLayout>
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_description_label"
-        android:textStyle="bold" />
+        <!-- Also known as (AKA) Category -->
+        <LinearLayout style="@style/LinearCategoryStyle">
 
-</LinearLayout>
+            <!-- AKA label -->
+            <TextView
+                android:text="@string/detail_also_known_as_label"
+                style="@style/LabelStyle" />
+
+            <!-- AKA field container -->
+            <LinearLayout style="@style/LinearFieldStyle">
+
+                <!-- AKA field -->
+                <TextView
+                    android:id="@+id/also_known_tv"
+                    style="@style/TextViewFieldStyle"
+                    tools:text="This is the AKA Field. It is an auto-sizing TextView" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Description Category -->
+        <LinearLayout style="@style/LinearCategoryStyle">
+
+            <!-- Description label -->
+            <TextView
+                android:text="@string/detail_description_label"
+                style="@style/LabelStyle" />
+
+            <!-- Description field container -->
+            <LinearLayout style="@style/LinearFieldStyle">
+
+                <!-- Description field -->
+                <TextView
+                    android:id="@+id/description_tv"
+                    style="@style/TextViewFieldStyle"
+                    tools:text="This is where the long description goes. It is an auto-sizing TextView." />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Ingredients Category -->
+        <LinearLayout style="@style/LinearCategoryStyle">
+
+            <!-- Ingredients label -->
+            <TextView
+                android:text="@string/detail_ingredients_label"
+                style="@style/LabelStyle" />
+
+            <!-- Ingredients field container -->
+            <LinearLayout style="@style/LinearFieldStyle">
+
+                <!-- Ingredients field -->
+                <TextView
+                    android:id="@+id/ingredients_tv"
+                    style="@style/TextViewFieldStyle"
+                    tools:text="This is where the ingredients list goes." />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>

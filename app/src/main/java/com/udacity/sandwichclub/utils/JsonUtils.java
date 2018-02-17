@@ -2,6 +2,7 @@ package com.udacity.sandwichclub.utils;
 
 import android.text.TextUtils;
 
+import com.udacity.sandwichclub.R;
 import com.udacity.sandwichclub.model.Sandwich;
 
 import org.json.JSONArray;
@@ -28,6 +29,7 @@ public class JsonUtils {
 
             // Extract top level String values
             String placeOfOrigin = jsonObject.getString("placeOfOrigin");
+
             String description = jsonObject.getString("description");
             String image = jsonObject.getString("image");
 
