@@ -43,7 +43,10 @@ public class DetailActivity extends AppCompatActivity {
             closeOnError();
         }
 
-        int position = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
+        int position = 0;
+        if (intent != null) {
+            position = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
+        }
         if (position == DEFAULT_POSITION) {
             // EXTRA_POSITION not found in intent
             closeOnError();
